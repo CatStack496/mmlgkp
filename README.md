@@ -12,7 +12,7 @@ one idea would to use an extension like Simple Mass Downloader, which is both on
 
 I dont condone using this site to illegally download music, so whatever you do with the site and this tool is at your own risk.
 
-A bookmarklet version is included in bookmarklet.txt
-The standalone script is in mmlgkp.js
+A bookmarklet version is included in bookmarklet.txt.
+The standalone script is in mmlgkp.js.
 
 
