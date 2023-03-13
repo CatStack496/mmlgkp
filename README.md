@@ -8,7 +8,7 @@ on fetching the links, it will attempt to append a long list of them, seperated 
 and will also output the same output to console in one big console.log so you can copy them from there if the clipboard doesnt work
 
 its up to you what to do with those links after that. 
-one idea would to use an extension like Simple Mass Downloader, which is both on Firefox and Chrome, and paste all the links from your clipboard to download them
+One idea would be to use an extension like Simple Mass Downloader, which is both on Firefox and Chrome, and paste all the links from your clipboard to download them
 
 I dont condone using this site to illegally download music, so whatever you do with the site and this tool is at your own risk.
 
