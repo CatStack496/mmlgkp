@@ -1,0 +1,44 @@
+javascript:(function() {
+  var songDeleteLinks = document.querySelectorAll('a[href*="song_delete"]');
+  songDeleteLinks.forEach(function(link) {
+    link.remove();
+  });
+
+  var mp3Links = [];
+
+  var downloadButtons = document.querySelectorAll('td.playlistDownloadSong a');
+
+  downloadButtons.forEach(function(button, index) {
+    var href = button.getAttribute('href');
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.responseType = 'document';
+
+    xhr.open('GET', href, true);
+
+    xhr.onload = function() {
+      var links = xhr.response.querySelectorAll('a[href$=".mp3"]');
+
+      links.forEach(function(link) {
+        var url = link.getAttribute('href');
+        mp3Links.push(url);
+      });
+
+      if (mp3Links.length === downloadButtons.length) {
+        var linksString = mp3Links.join('
+');
+        var tempInput = document.createElement('textarea');
+        tempInput.value = linksString;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        console.log('Links copied to clipboard!');
+        console.log(linksString);
+      }
+    };
+
+    xhr.send();
+  });
+})();
